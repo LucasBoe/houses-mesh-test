@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20da92fb5c0aeca4a9fc0ee190bc7d72, type: 3}
+  m_Name: house02
+  m_EditorClassIdentifier: 
+  GroundFloor:
+    MinMaxHeight: {x: 1.1008232, y: 1.2846683}
+  UpperFloor:
+    MinMaxHeight: {x: 1.4885795, y: 1.7439634}
+  minMaxFloorCount: {x: 2, y: 2}
+  WallMaterial: {fileID: 2100000, guid: 62688df9788e0e540b2043259afbdf14, type: 2}
+  RoofFrontMaterial: {fileID: 2100000, guid: 8ffcbb7c636293d4aaa392568a5f3caf, type: 2}
+  RoofMaterials:
+  - {fileID: 2100000, guid: 5226660e28358e94c94f4ab03c036dbc, type: 2}
+  - {fileID: 2100000, guid: 1262a0c7834c56147aa523bd4f77fbbb, type: 2}
+  RoofHeightRatio: 0.63
+  RoofFrontOverhang: 0.05
