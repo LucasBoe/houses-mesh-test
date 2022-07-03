@@ -11,6 +11,15 @@ public class MeshCreator : MonoBehaviour
     [SerializeField] HouseData data;
     [SerializeField, ReadOnly] int seed;
 
+    [SerializeField] HouseData[] randomHouses;
+
+    [Button] 
+    private void FullRandom()
+    {
+        RandomizeSeed();
+        data = randomHouses[UnityEngine.Random.Range(0,randomHouses.Length)];
+        UpdateMaterials();
+    }
 
     // Update is called once per frame
     void Update()
@@ -213,7 +222,7 @@ public class MeshCreator : MonoBehaviour
             CreateTriangles(tris, index6, index4);
 
             float uvHeight = floor == 0 ? 0 : 0.5f;
-            float edgeSize = 0.15f;
+            float edgeSize = data.EdgeSize;
 
             SetUVs(uvs, index4, -edgeSize, DistanceToUVLength(Vector3.Distance(corner2, corner1)) + edgeSize, uvHeight, uvHeight + 0.5f);
         }

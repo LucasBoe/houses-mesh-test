@@ -16,6 +16,8 @@ public class HouseData : ScriptableObject
     public float RoofHeightRatio = 2f;
 
     public float RoofFrontOverhang = 0.1f;
+
+    public float EdgeSize = 0.15f;
 }
 
 [System.Serializable]
