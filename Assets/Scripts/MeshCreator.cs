@@ -16,14 +16,17 @@ public class MeshCreator : MonoBehaviour
     [Button] 
     private void FullRandom()
     {
+
+        UnityEngine.Random.InitState(Mathf.RoundToInt(Time.time * 1000f));
         RandomizeSeed();
         data = randomHouses[UnityEngine.Random.Range(0,randomHouses.Length)];
         UpdateMaterials();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CreateRandomHouse(Vector3[] points)
     {
+        FullRandom();
+        cornerPoints = points;
         GenerateMesh();
     }
 
@@ -33,6 +36,8 @@ public class MeshCreator : MonoBehaviour
         string glyphs = "abcdefghijklmnopqrstuvwxyz0123456789"; //add the characters you want
         int charAmount = 99;
         string myString = "";
+
+
         for (int i = 0; i < charAmount; i++)
         {
             myString += glyphs[UnityEngine.Random.Range(0, glyphs.Length)];
